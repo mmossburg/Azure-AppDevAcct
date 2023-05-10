@@ -28,9 +28,9 @@ resource "azurerm_resource_group" "RGAppDev" {
 
 # Create a virtual network within the resource group
 resource "azurerm_virtual_network" "example" {
-  name                = "example-network"
-  resource_group_name = azurerm_resource_group.example.name
-  location            = azurerm_resource_group.example.location
+  name                = "EUS-VNET"
+  resource_group_name = azurerm_resource_group.RGAppDev.name
+  location            = azurerm_resource_group.RGAppDev.location
   address_space       = ["10.1.0.0/16"]
 }
   
