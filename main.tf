@@ -11,7 +11,7 @@ terraform {
 
 
 
-# Configure the Microsoft Azure Provider
+# Configure the Microsoft Azure Provider test
 provider "azurerm" {
   features {}
   
