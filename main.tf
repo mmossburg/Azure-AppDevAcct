@@ -26,8 +26,8 @@ resource "azurerm_resource_group" "RGAppDev" {
 
  # TBD still ned to figure out addressing spaces and stuff
 
-# Create a virtual network within the resource group
-resource "azurerm_virtual_network" "example" {
+# Create a virtual network within the resour_1.1.0.0.-16ce group
+resource "azurerm_virtual_network" "EUS-VNET_10.1.0.0_16" {
   name                = "EUS-VNET"
   resource_group_name = azurerm_resource_group.RGAppDev.name
   location            = azurerm_resource_group.RGAppDev.location
@@ -36,4 +36,12 @@ resource "azurerm_virtual_network" "example" {
   
   # create subnet configs
   
-  
+  resource "azurerm_subnet" "EUS Subnet" {
+    name EUS "EUS_Subnet_10.1.1.0_24"
+    resource_group_name  = azurerm_resource_group.RGAppDev.name
+    virtual_network_name = azurerm_virtual_network.EUS_VNET.name
+    address_prefixes     = ["10.1.1.0/24"]
+
+  }
+
+
