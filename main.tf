@@ -24,7 +24,7 @@ resource "azurerm_resource_group" "RGAppDev" {
   location = "eastus"
 }
 
- TBD still ned to figure out addressing spaces and stuff
+ # TBD still ned to figure out addressing spaces and stuff
 
 # Create a virtual network within the resource group
 resource "azurerm_virtual_network" "example" {
