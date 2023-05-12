@@ -44,4 +44,24 @@ resource "azurerm_virtual_network" "EUS-VNET" {  #_10_1_0_0_16
 
   }
 
+resource "azurerm_subnet" "EUS_Subnet" {
+    name                 = "EUS_Subnet_10_1_2_0_24"
+    resource_group_name  = azurerm_resource_group.RGAppDev.name
+    virtual_network_name = azurerm_virtual_network.EUS-VNET.name
+    address_prefixes     = ["10.1.2.0/24"]
 
+  }
+
+
+/* # Dev
+script line 1
+2
+3
+4
+
+# prod
+script line 1
+2
+3
+4
+*/
