@@ -53,6 +53,11 @@ resource "azurerm_subnet" "EUS_Subnet2" {
   }
 
 
+
+
+
+
+
 /* # Dev
 script line 1
 2
