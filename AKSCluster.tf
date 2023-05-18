@@ -1,4 +1,4 @@
-/*
+
 
 resource "azurerm_kubernetes_cluster" "aks" {
   name                = "my-aks-cluster"
@@ -13,11 +13,12 @@ resource "azurerm_kubernetes_cluster" "aks" {
     os_disk_size_gb = 30
   }
 
+/*
   service_principal {
     client_id     = "<your-service-principal-client-id>"
     client_secret = "<your-service-principal-client-secret>"
   }
-
+*/
   tags = {
     Environment = "Production"
     RU          = "100"
@@ -25,4 +26,3 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 }
 
-*/
