@@ -12,13 +12,13 @@ resource "azurerm_kubernetes_cluster" "aks" {
     vm_size         = "Standard_B2s"  # Smallest VM size
     os_disk_size_gb = 30
   }
-
-/*
+  
+  
   service_principal {
-    client_id     = "<your-service-principal-client-id>"
-    client_secret = "<your-service-principal-client-secret>"
+    client_id     = "0b403db9-bc99-4148-8c0f-1b2a0d70518b"
+    client_secret = "oRc8Q~gLLCBWyrFWf.OkOEhdfgK.GdT1~ExsSavx"
   }
-*/
+
   tags = {
     Environment = "Production"
     RU          = "100"
